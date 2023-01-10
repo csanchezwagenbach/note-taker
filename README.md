@@ -1,7 +1,7 @@
 # note-taker
 
 ## Description
-note-taker is a basic, full stack application for taking, tracking, and storing personal notes. note-taker utilizes express.js to run back end storage.  Using the application, users may write notes for themselves that they store for later use.
+note-taker is a basic, full stack application for taking, tracking, and storing personal notes. note-taker utilizes express.js to run back end storage.  Using the application, users may write notes for themselves that they store for later use. The application is now live and may be accessed and utilized [here.](https://safe-forest-59873.herokuapp.com/notes)
 
 ## Table of Contents
 - [Installation](#installation)
