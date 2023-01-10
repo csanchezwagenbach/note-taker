@@ -6,9 +6,13 @@ const {
     writeToFile,
 } = require ("../helpers/fsUtils");
 
+//Route describing how get requests to /api/notes will read the data stored in db/db.json and return it to users
+
 notes.get("/", (req, res) => {
     readFromFile("./db/db.json").then((data) => res.json(JSON.parse(data)))
 });
+
+//Route describing how post requests to /api/notes will read the data stored in db/db.json, parse it and push in a new note, then rewrite that data back onto db/db.json.
 
 notes.post("/", (req, res) => {
     console.log(req.body);
@@ -28,6 +32,8 @@ notes.post("/", (req, res) => {
         res.errored(`Error in adding new note`)
     }
 });
+
+//Route describing how delete requests to /api/notes will find the note with the same id as the delete-request, filter through db/db.json and remove the note with the same id as the delete-request, then rewrite that modified data back to db/db.json
 
 notes.delete("/:id", (req, res) => {
     const noteId = req.params.id;
